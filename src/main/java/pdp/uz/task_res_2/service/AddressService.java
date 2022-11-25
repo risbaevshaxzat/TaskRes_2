@@ -4,8 +4,6 @@ import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RestController;
 import pdp.uz.task_res_2.Entity.Address;
-import pdp.uz.task_res_2.payload.AddressDto;
-import pdp.uz.task_res_2.payload.ApiResponse;
 import pdp.uz.task_res_2.repo.AddressRepository;
 
 import java.util.List;
@@ -29,17 +27,17 @@ public class AddressService {
         return optionalCustomer.orElse(null);
     }
 
-    public Address addCustomer(Address address){
+    public Address addAddress(Address address){
         return addressRepository.save(address);
     }
 
+    public Address  finAlId(Integer id){
+        return addressRepository.findById(id).get();
+    }
 
-
-
-
-
-    public void deleteUserById(int id) {
+    public Address deleteAddressById(int id) {
         addressRepository.deleteById(id);
+       return null;
     }
 
 }

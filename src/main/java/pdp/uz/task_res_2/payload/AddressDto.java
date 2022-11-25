@@ -13,10 +13,10 @@ import javax.validation.constraints.NotNull;
 public class AddressDto {
 
 
-    @NotNull(message = "street  kiritshibfiz shart !")
+    @NotNull(message = "First street is required !")
     private String street;
 
-    @NotNull(message = "homeNumber kiritshingz shart !")
+    @NotNull(message = "First homeNumber is required !")
     private String homeNumber;
 
 
