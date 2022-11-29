@@ -23,10 +23,12 @@ public class Worker {
     @Column(nullable = true)
     private String phoneNumber;
 
-    @Column(nullable = true)
-    private String address;
+    @OneToOne
+    @JoinColumn(nullable = false,name = "addresss")
+    private Address address;
 
-    @Column(nullable = true)
-    private String department;
+    @OneToOne
+    @JoinColumn(nullable = false,name = "department_id")
+    private Department department;
 
 }

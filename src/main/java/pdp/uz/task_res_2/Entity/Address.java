@@ -22,4 +22,9 @@ public class Address {
 
     @Column(nullable = false)
     private String homeNumber;
+
+    @OneToOne
+    @JoinColumn
+    private Company company;
+    //men ulanishlar haqida ma'lumotga ega emasman
 }

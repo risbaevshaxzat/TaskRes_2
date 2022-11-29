@@ -19,6 +19,7 @@ public class Department {
     @Column(nullable = true)
     private String name;
 
-    @Column(nullable = false)
-    private String company;
+    @OneToOne
+    @JoinColumn(nullable = false,name = "company_id")
+    private Company company;
 }

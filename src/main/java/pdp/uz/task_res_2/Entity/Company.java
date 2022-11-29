@@ -26,7 +26,7 @@ public class Company {
     @NotEmpty(message = "First directorName is required")
     private String directorName;
 
-    @Column(nullable = false)
-    @NotEmpty(message = "First address is required")
-    private String address;
+    @OneToOne
+    @JoinColumn(nullable = false,name = "addres_id")
+    private Address address;
 }
